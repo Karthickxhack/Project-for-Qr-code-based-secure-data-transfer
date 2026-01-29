@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Secure Data Receiver</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #020617;
+      color: #38bdf8;
+      text-align: center;
+      padding: 50px;
+    }
+    .box {
+      background: #0f172a;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      min-width: 300px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>📥 Secure Data Received</h2>
+
+  <div class="box">
+    <p id="output">Loading...</p>
+  </div>
+
+  <script>
+    // Get "data" parameter from URL
+    const params = new URLSearchParams(window.location.search);
+    const data = params.get("data");
+
+    if (data) {
+      // Decode and display the data
+      document.getElementById("output").innerText = decodeURIComponent(data);
+    } else {
+      document.getElementById("output").innerText = "No data found or invalid QR";
+    }
+  </script>
+
+</body>
+</html>
