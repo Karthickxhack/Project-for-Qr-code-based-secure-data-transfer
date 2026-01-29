@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Secure QR Data Transfer | Receiver</title>
+
+  <link rel="stylesheet" href="./receiver.css">
+
+  <!-- CryptoJS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>📥 Secure Message</h1>
+
+    <input type="password" id="key" placeholder="Enter secret key">
+    <button onclick="decryptData()">Decrypt Message</button>
+
+    <p id="output"></p>
+  </div>
+
+  <script src="./receiver.js"></script>
+</body>
+</html>
